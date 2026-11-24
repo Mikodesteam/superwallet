@@ -52,9 +52,17 @@ A white-label crypto wallet for iOS and Android: EVM networks, Bitcoin, Solana, 
 - **Firebase backend: Firestore rules, Remote Config template and Cloud Functions**
 - **Inactive revenue settings marked Not active in this version in the admin**
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Swap fee config**: [`snippets/swap_fee_config.dart`](snippets/swap_fee_config.dart). The operator swap fee is disabled by default and hard-capped at 2 %. The value is clamped on input and again on read, so a bad admin setting can never overcharge a user.
+Real excerpts from the source, shown for illustration:
+
+- **Swap fee config** ([`snippets/swap_fee_config.dart`](snippets/swap_fee_config.dart)): The operator swap fee is disabled by default and hard-capped at 2 %. The value is clamped on input and again on read, so a bad admin setting can never overcharge a user.
+- **PRO plan pricing for crypto payments** ([`snippets/pro_crypto_plans.ts`](snippets/pro_crypto_plans.ts)): The server, not the app, decides what a PRO plan costs and how long it lasts. An unknown plan is refused, an unpriced plan is not sold for crypto, and a small tolerance covers price moves between sending and confirming.
+- **Signing authentication gate** ([`snippets/signing_auth_gate.dart`](snippets/signing_auth_gate.dart)): One authentication opens a short grant (at most 60 seconds) that covers exactly the signatures one action needs. dApp requests always ask again, and with no authenticator attached it fails closed.
 
 ## Requirements (full version)
 
