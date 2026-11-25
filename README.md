@@ -8,6 +8,8 @@
   <b>Non-custodial multi-chain crypto wallet (Flutter) with an admin panel.</b>
 </p>
 
+<p align="center"><sub>Flutter crypto wallet source code · non-custodial multi-chain wallet app · iOS & Android · admin panel · white-label</sub></p>
+
 <p align="center">
   <a href="https://superwallet.mikodes.com/docs/"><b>Docs</b></a> ·
   <a href="https://superwallet.mikodes.com/"><b>Website</b></a> ·
@@ -74,6 +76,20 @@ Real excerpts from the source, shown for illustration:
 - Reown
 
 Not included: Hosting and domain; Third-party API subscriptions; Developer accounts; Blockchain network fees.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete SuperWallet source code is sold at [store.mikodes.com/p/superwallet](https://store.mikodes.com/p/superwallet/).
+
+**What is SuperWallet built with?**  
+Firebase, Flutter.
+
+**Can I try it before buying?**  
+Look at the screenshots and the [case study](docs/HOW-IT-WORKS.md), or ask a question at [mikodes.com/support](https://mikodes.com/support).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
